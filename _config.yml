@@ -71,7 +71,7 @@ ga_domain: blog.path2wind.top
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "简单不先于复杂，而是在复杂之后"
-sidebar-avatar: /img/avatar-wtl.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/terry_avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
