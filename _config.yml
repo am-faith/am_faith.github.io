@@ -42,19 +42,18 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-github_username:
-bitbucket_username:
-stackoverflow_id:
-twitter_username:
-skype_username:
-steam_nickname:
-google_plus_id:
-linkedin_username:
-angellist_username:
-medium_id:
+github_username: am_faith
+bitbucket_username: am_faith
+stackoverflow_id: am_faith
+twitter_username: am_faith
+skype_username: am_faith
+steam_nickname: am_faith
+google_plus_id: am_faith
+linkedin_username: am_faith
+angellist_username: am_faith
+medium_id: 
 zhihu_username: terry-wu-23
 weibo_username: am_faith
-github_username: am_faith  
 bitcoin_url:
 paypal_url:
 flattr_button:
