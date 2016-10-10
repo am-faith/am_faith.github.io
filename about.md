@@ -5,16 +5,14 @@ permalink: /about/
 tags: about
 ---
 
-This Jekyll theme was crafted with <3 by [John Otander](http://johnotander.com)
-([@4lpine](https://twitter.com/4lpine)).
+> 简单不先于复杂，而是在复杂之后
+> 每一个问题都是一把锁，你要相信世界上一定有一把钥匙能打开这把锁，你也能找到这把钥匙
 
-Checkout the [Github repository](https://github.com/johnotander/pixyll) to download it,
-request a feature, report a bug, or contribute. It's free, and open source
-([MIT](http://opensource.org/licenses/MIT)).
 
-Thanks to the following:
+Hey, 我是Terry，程序员 & 架构师 ，一个重度懒癌患者， 主要专注移动端开发，有时也写写后端代码。
 
-* [BASSCSS](http://basscss.com)
-* [Jekyll](http://jekyllrb.com)
-* [Refills](http://refills.bourbon.io/)
-* [Type Scale](http://type-scale.com/)
+希望能一起聊聊技术、生活，QQ:412469748 , 微信: am_faith
+
+
+
+
