@@ -24,7 +24,7 @@ show_social_icons:    true
 ajaxify_contact_form: true
 enable_mathjax: true
 extended_fonts: true
-enable_anchorjs: true
+enable_anchorjs: false
 
 # Facebook Page integration
 # (for instant articles and other stuff)
@@ -60,16 +60,16 @@ paypal_url:
 flattr_button:
 
 # Post sharing icons
-show_sharing_icons: false
+show_sharing_icons: true
 # Change to 'true' to enable individual icons
 share_facebook: true
 share_twitter: true
-share_googleplus: false
-share_linkedin: false
-share_digg: false
+share_googleplus: true
+share_linkedin: true
+share_digg: true
 share_tumblr: false
 share_reddit: false
-share_stumbleupon: false
+share_stumbleupon: true
 share_hackernews: false
 share_zhihu: true
 share_weibo: true
