@@ -112,6 +112,17 @@ text:
 
 # Build settings
 markdown:     kramdown
+kramdown:
+  input: GFM
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+  use_coderay: true
+  syntax_highlighter: rouge
+  coderay:
+    coderay_line_numbers:  nil
+    
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
