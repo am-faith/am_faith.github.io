@@ -94,8 +94,9 @@ Android将系统的声音分为以下几类常见的（未写全）：
 
 ##### 3.2 分析之getMinBufferSize
 AudioTrack的例子就几个函数。先看看第一个函数：
+
 ```
-    AudioTrack.getMinBufferSize(8000,//每秒8K个点
+AudioTrack.getMinBufferSize(8000,//每秒8K个点
     	AudioFormat.CHANNEL_CONFIGURATION_STEREO,//双声道
     	AudioFormat.ENCODING_PCM_16BIT);
 
@@ -184,6 +185,7 @@ getMinBufSize函数完了后，我们得到一个满足最小要求的缓冲区�
 
 ##### 3.3 分析之new AudioTrack
 先看看调用函数：
+
 ```
     AudioTrack trackplayer = new AudioTrack(
     	AudioManager.STREAM_MUSIC,
@@ -218,6 +220,7 @@ getMinBufSize函数完了后，我们得到一个满足最小要求的缓冲区�
     }
 ```
 上面函数调用最终进入了JNI层android_media_AudioTrack.cpp下面的函数
+
 ```
     static int
 
@@ -305,6 +308,7 @@ getMinBufSize函数完了后，我们得到一个满足最小要求的缓冲区�
 
 这个类其实就是一个辅助类，但是里边有一些知识很重要，尤其是Android封装的一套共享内存的机制。这里一并讲解，把这块搞清楚了，我们就能轻松得在两个进程间进行内存的拷贝。
 AudioTrackJniStorage的代码很简单。
+
 ```
     struct audiotrack_callback_cookie {
         jclass      audioTrack_class;
@@ -331,6 +335,7 @@ AudioTrackJniStorage的代码很简单。
 2. MemoryHeapBase
 
 MemroyHeapBase也是Android搞的一套基于Binder机制的对内存操作的类。既然是Binder机制，那么肯定有一个服务端（Bnxxx），一个代理端Bpxxx。看看MemoryHeapBase定义
+
 ```
     class MemoryHeapBase : public virtual BnMemoryHeap
     {
@@ -365,6 +370,7 @@ MemroyHeapBase也是Android搞的一套基于Binder机制的对内存操作的�
 那么估计这个类就是一个能返回当前Buffer中写位置（就是offset）的方便类
 
 这样就不用用户到处去计算读写位置了。
+
 ```
     class MemoryBase : public BnMemory
     {
@@ -392,6 +398,7 @@ MemroyHeapBase也是Android搞的一套基于Binder机制的对内存操作的�
 JAVA层到这一步后就是调用play和write了。JAVA层这两个函数没什么内容，都是直接转到native层干活了。
 
 先看看play函数对应的JNI函数
+
 ```
     static void
     android_media_AudioTrack_start(JNIEnv *env, jobject thiz)
@@ -404,6 +411,7 @@ JAVA层到这一步后就是调用play和write了。JAVA层这两个函数没什
     }
 ```
 下面是write。我们写的是short数组，
+
 ```
     static jint
     android_media_AudioTrack_native_write_short(JNIEnv *env,  jobject thiz,
@@ -460,6 +468,7 @@ JAVA层到这一步后就是调用play和write了。JAVA层这两个函数没什
 那么，我们就看看真正干活的的C++AudioTrack吧。
 AudioTrack.cpp位于framework\base\libmedia\AudioTrack.cpp
 ##### 4.1 new AudioTrack()和set调用
+
 ```
     JNI层调用的是最简单的构造函数：
 
@@ -672,6 +681,7 @@ framework/base/include/private/media/AudioTrackShared.h
 * AudioTrack调用write函数，肯定是把数据写到那块共享缓冲了，然后IAudioTrack在另外一个进程AudioFlinger中（其实AudioFlinger是一个服务，在mediaservice中运行）接收数据，并最终写到音频设备中。
 
 那我们先看看AudioTrackThread干什么了。
+
 ```
     调用的语句是：
 
@@ -694,6 +704,7 @@ framework/base/include/private/media/AudioTrackShared.h
     }
 ```
 这个线程的启动由AudioTrack的start函数触发。
+
 ```
     void AudioTrack::start()
 
@@ -794,6 +805,7 @@ mCbf由set的时候传入C++的AudioTrack，实际函数是：
 让我们看看write吧。
 
 ##### 4.2 write
+
 ```
     ssize_t AudioTrack::write(const void* buffer, size_t userSize)
 
