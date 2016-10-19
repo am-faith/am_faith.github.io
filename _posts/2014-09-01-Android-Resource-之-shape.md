@@ -2,7 +2,7 @@
 layout:     post
 title:      Android Resource 之 shape
 date:       2014-09-01 22:21:29
-summary:    Android App开发规范
+summary:    Android Resource
 categories: android resource
 ---
 
@@ -21,8 +21,6 @@ categories: android resource
 ## *rectangle*
 
 rectangle是默认的形状，也是用得最多的形状，一些文字背景、按钮背景、控件或布局背景等，以下是一些简单的例子：
-
- <img src="{{ site.baseurl }}/images/S50829-115225.jpg" />
 
 ![shape1](https://github.com/am-faith/am_faith.github.io/tree/gh-pages/images/post/S50829-115225.jpg)
 
