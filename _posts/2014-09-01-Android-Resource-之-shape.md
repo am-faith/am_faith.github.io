@@ -22,6 +22,8 @@ categories: android resource
 
 rectangle是默认的形状，也是用得最多的形状，一些文字背景、按钮背景、控件或布局背景等，以下是一些简单的例子：
 
+ <img src="{{ site.baseurl }}/images/S50829-115225.jpg" />
+
 ![shape1](https://github.com/am-faith/am_faith.github.io/tree/gh-pages/images/post/S50829-115225.jpg)
 
 实现上面的那些效果，都用到了以下这些特性：
