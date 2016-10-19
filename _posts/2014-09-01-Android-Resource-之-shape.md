@@ -22,7 +22,7 @@ categories: android resource
 
 rectangle是默认的形状，也是用得最多的形状，一些文字背景、按钮背景、控件或布局背景等，以下是一些简单的例子：
 
-![shape1][https://github.com/am-faith/am_faith.github.io/tree/gh-pages/images/post/S50829-115225.jpg]
+![shape1](https://github.com/am-faith/am_faith.github.io/tree/gh-pages/images/post/S50829-115225.jpg)
 
 实现上面的那些效果，都用到了以下这些特性：
 
@@ -104,7 +104,7 @@ rectangle是默认的形状，也是用得最多的形状，一些文字背景�
 ## *oval*
 oval用来画椭圆，而在实际应用中，更多是画正圆，比如消息提示，圆形按钮等，下图是一些例子：
 
-![shape2][https://github.com/am-faith/am_faith.github.io/tree/gh-pages/images/post/097E4ABF-0D82-4FEA-BC76-F37AB37EB94C.jpeg]
+![shape2](https://github.com/am-faith/am_faith.github.io/tree/gh-pages/images/post/097E4ABF-0D82-4FEA-BC76-F37AB37EB94C.jpeg)
 
 上面的效果图应用了solid、padding、stroke、gradient、size几个特性。size是用来设置形状大小的，如下：
 
@@ -156,7 +156,7 @@ oval用来画椭圆，而在实际应用中，更多是画正圆，比如消息�
 
 ## *line*
 
-![shape2][https://github.com/am-faith/am_faith.github.io/tree/gh-pages/images/post/4C634096-CD97-4C5B-99B4-434CC0951631.jpeg]
+![shape2](https://github.com/am-faith/am_faith.github.io/tree/gh-pages/images/post/4C634096-CD97-4C5B-99B4-434CC0951631.jpeg)
 
 line主要用于画分割线，是通过stroke和size特性组合来实现的，先看虚线的代码：
 
@@ -195,7 +195,7 @@ line主要用于画分割线，是通过stroke和size特性组合来实现的，
 * android:thicknessRatio 浮点型，以环的宽度比率来表示环的厚度，默认为9，表示环的厚度为环的宽度除以9，该值会被android:thickness覆盖
 * android:useLevel 一般为false，否则可能环形无法显示，只有作为LevelListDrawable使用时才设为true
 
-![shape2][https://github.com/am-faith/am_faith.github.io/tree/gh-pages/images/post/C89E4D64-2A95-45C1-B4A9-4FC03EE18F4F.jpeg]
+![shape2](https://github.com/am-faith/am_faith.github.io/tree/gh-pages/images/post/C89E4D64-2A95-45C1-B4A9-4FC03EE18F4F.jpeg)
 
 第一个图只添加了solid；第二个图只添加了gradient，类型为sweep；第三个图只添加了stroke；第四个图添加了gradient和stroke两项特性。
 以下为第四个图的代码：
